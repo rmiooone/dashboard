@@ -1,0 +1,15 @@
+.Nasa {
+    width: 150vh;
+    position: relative;
+    color: white;
+  }
+
+.Nasa .container {
+    max-width: 700px;
+    height: auto;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  } 
