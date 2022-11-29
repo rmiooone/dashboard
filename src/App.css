@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   padding: 5rem;
+  background-color: #d2e8eee2;
 }
 
 .App-logo {
@@ -36,4 +37,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.View {
+ 
+}
+.space{
+
+}
+
+.Grid{
+display: flex;
+flex-direction: row;
 }
