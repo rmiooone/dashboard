@@ -18,9 +18,12 @@ code {
     monospace;
 }
 
+h2 {
+  font-size: 1rem;
+}
+
 p {
-  font-size: 0.5rem;
- 
+  font-size: 0.7rem;
 }
 
 h1 {
@@ -28,56 +31,3 @@ h1 {
   font-weight: 700;
 }
 
-.widget {
-  width: 25vh;
-  height: 25vh;
-  position: relative;
-  color: white;
-  background-color: rgb(0, 0, 0, 0.4);
-  border-radius: 25px;
-  margin: 1rem;
-}
-
-.widget:before {
-  content: '';
-  background: url('./stories/assets/sunset.jpeg') no-repeat center center/cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  left: 0%;
-  z-index: -1;
-}
-
-.container {
-  max-width: 700px;
-  height: 700px;
-  margin: auto;
-  padding: 0 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-} 
-
-.widget .top {
-  width: 100%;
-  margin: 1rem auto; 
-}
-
-.widget .description {
-  position: relative; 
-  right: -50%;
-  top: -5%;
-  transform: rotate(270deg);
-}
-
-.widget .bottom {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center; 
-  width: 100%;
-  margin: 1rem auto; 
-  padding: 0.5rem; 
-  border-radius: 12px;
-  background-color: rgb(255, 255, 255, 0.5);
-}
