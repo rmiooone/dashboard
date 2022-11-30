@@ -7,7 +7,7 @@ export class Weather extends React.Component {
     temp: '',
     feelslike: '',
     weather: '',
-    humidity: '', 
+    humidity: '',
     winds: ''
   }
 
@@ -17,12 +17,12 @@ export class Weather extends React.Component {
         return reponse.json()
       })
       .then((result) => {
-        this.setState({ 
+        this.setState({
           name: result.name,
           temp: result.main.temp,
           feelslike: result.main.feels_like,
           weather: result.weather[0].main,
-          humidity: result.main.humidity, 
+          humidity: result.main.humidity,
           winds: result.wind.speed
         })
       })
@@ -35,23 +35,30 @@ export class Weather extends React.Component {
           <div className='top'>
           </div>
           <div className='location'>
-           <h2>{this.state.name}</h2>
+            <h4>{this.state.name}</h4>
           </div>
           <div className='temp'>
-            <h1>{Math.round(this.state.temp-273)} °C</h1>
+            <h1 class='mb-12'>{Math.round(this.state.temp - 273)} °C</h1>
           </div>
           <div className='description'>
-            <h2>{this.state.weather}</h2>
+            <h4>{this.state.weather}</h4>
           </div>
           <div className='bottom'>
-            <div className='feels'>
-              <p>{Math.round(this.state.feelslike-273)}°C </p>
-            </div>
-            <div className='humidity'>
-              <p> {this.state.humidity}% </p>
-            </div>
-            <div className='wind'>
-              <p> {this.state.winds}km/h </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4"> 
+                    <p class="small"> {Math.round(this.state.feelslike - 273)}°C </p>
+                    <p class="small">Feels like</p>
+                    </div>
+                  <div class="col-sm-4">
+                      <p class="small"> {this.state.humidity}% </p>
+                      <p class="small"> Humidity</p>
+                      </div>
+                    <div class="col-sm-4">
+                        <p class="small">  {this.state.winds}km/h </p>
+                        <p class="small"> Wind</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

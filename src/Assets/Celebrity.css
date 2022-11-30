@@ -1,0 +1,37 @@
+.Celebrity {
+  width: 100%;
+  height: 100%;
+  top: 1rem;
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px #999;
+}
+
+.Celebrity .container {}
+
+
+.Celebrity .top {
+    width: 100%;
+    height: 1rem;
+    margin: 1rem;
+}
+
+.Celebrity .description {
+  position: relative;
+  right: 0%;
+}
+
+.location {
+  text-transform: capitalize;
+}
+
+.Celebrity .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255, 0.9);
+}
