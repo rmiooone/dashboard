@@ -35,13 +35,10 @@ export class Weather extends React.Component {
           <div className='top'>
           </div>
           <div className='location'>
-            <h4>{this.state.name}</h4>
+            <p class= "small">Weather</p>
           </div>
           <div className='temp'>
-            <h1 class='mb-12'>{Math.round(this.state.temp - 273)} °C</h1>
-          </div>
-          <div className='description'>
-            <h4>{this.state.weather}</h4>
+            <h1 class='large data'>{Math.round(this.state.temp - 273)} °C</h1>
           </div>
           <div className='bottom'>
             <div class="container">
