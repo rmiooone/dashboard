@@ -1,52 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Weather } from './Component/Weather';
-import { Nasa } from './Component/Nasa';
-import { Celebrity } from './Component/Celebrity';
-import { AirQuality } from './Component/AirQuality';
-import { Animals} from './Component/Animals';
-import {Dictionnary} from './Component/Dictionnary';
-import {Country} from './Component/Country';
+import {ViewApp} from './Component/ViewApp/ViewApp';
 
-
-class App extends React.Component {
+class App extends React.Component{
   render() {
     return (
-      <div className="App">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-            <Weather />
-            </div>
-            <div class="col-sm-4">
-              <Animals />
-            </div>
-            <div class="col-sm-4">
-            <Country/>
-            </div>
-          </div>
-        </div>
-        <div class= "space"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <AirQuality/>
-            </div>
-            <div class="col-sm-8">
-              <Nasa/>
-            </div>
-            </div>
-        </div>
-        <div class= "space"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <Dictionnary/>
-            </div>
-            </div>
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          <Route path='/Home' exact element={<ViewApp/>} />
+          <Route path='/' exact element={<ViewApp/>} />
+          <Route path='/admin' exact element={<ViewApp/>} />
+        </Routes>
+      </Router>
     );
   }
 }

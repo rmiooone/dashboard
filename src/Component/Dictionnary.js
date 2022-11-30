@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Assets/Celebrity.css';
+import '../Assets/Joke.css';
 
 export class Dictionnary extends React.Component {
     state = {

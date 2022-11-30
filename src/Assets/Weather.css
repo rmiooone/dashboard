@@ -19,6 +19,9 @@
     height: 1rem;
     margin: 1rem;
   }
+  .widget .logoweather {
+    top: -10%;
+  }
   .widget .data {
     font-weight: bolder;
     text-transform: uppercase;

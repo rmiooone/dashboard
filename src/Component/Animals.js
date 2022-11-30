@@ -1,5 +1,7 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
 import '../Assets/Animals.css';
+import logo from '../Assets/img/animals.png';
 
 export class Animals extends React.Component {
     state = {
@@ -35,12 +37,30 @@ export class Animals extends React.Component {
                 <div className='container'>
                     <div className='top'>
                     </div>
-                    <div className='location'>
-                            <p class="small">Animals</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div className='location'>
+                                    <p class="small">Animals</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div className='location'>
+                                    <p class="small">{this.state.name}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+
+                            </div>
+                            <div class="col-sm-3 logoweather">
+                                <Image src={logo} fluid rounded alt="Logo of Animals category" />
+                            </div>
+                        </div>
                     </div>
+
                     <div className='information'>
-                        <p class= "small">The {this.state.name} has a maximum speed of</p>
-                        <h1 class= "large data">{this.state.speed}</h1>
+                        <p class="small">The {this.state.name} has a maximum speed of</p>
+                        <h1 class="large data">{this.state.speed}</h1>
                     </div>
                     <div class="small"> They are {this.state.species} differents species of it</div>
                 </div>
