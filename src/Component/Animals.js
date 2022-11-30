@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Assets/Joke.css';
+import '../Assets/Animals.css';
 
 export class Animals extends React.Component {
     state = {
@@ -31,18 +31,18 @@ export class Animals extends React.Component {
 
     render() {
         return (
-            <div className='Celebrity'>
+            <div className='Animals'>
                 <div className='container'>
                     <div className='top'>
                     </div>
                     <div className='location'>
-                    <p class="lead">Animals</p>
+                            <p class="small">Animals</p>
                     </div>
-                    <div className='bottom'>
-                        <p class= "lead">The {this.state.name} has a maximum speed of</p>
-                        <h1 class= "large">{this.state.speed}</h1>
+                    <div className='information'>
+                        <p class= "small">The {this.state.name} has a maximum speed of</p>
+                        <h1 class= "large data">{this.state.speed}</h1>
                     </div>
-                    <div class="lead"> They are {this.state.species} differents species of it</div>
+                    <div class="small"> They are {this.state.species} differents species of it</div>
                 </div>
             </div>
         );

@@ -6,6 +6,8 @@ import { Nasa } from './Component/Nasa';
 import { Celebrity } from './Component/Celebrity';
 import { AirQuality } from './Component/AirQuality';
 import { Animals} from './Component/Animals';
+import {Dictionnary} from './Component/Dictionnary';
+import {Country} from './Component/Country';
 
 
 class App extends React.Component {
@@ -21,7 +23,7 @@ class App extends React.Component {
               <Animals />
             </div>
             <div class="col-sm-4">
-            <Celebrity/>
+            <Country/>
             </div>
           </div>
         </div>
@@ -33,6 +35,14 @@ class App extends React.Component {
             </div>
             <div class="col-sm-8">
               <Nasa/>
+            </div>
+            </div>
+        </div>
+        <div class= "space"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <Dictionnary/>
             </div>
             </div>
         </div>
