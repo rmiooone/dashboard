@@ -33,9 +33,21 @@ export class Country extends React.Component {
                 <div className='container'>
                     <div className='top'>
                     </div>
-                    <div className='location'>
+                    <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div className='location'>
                     <p class="small">Country</p>
                     </div>
+              </div>
+              <div class="col-sm-6">
+                <div className='location'>
+                  <p class="small">{this.state.name}</p>
+                </div>
+              </div>
+              </div>
+          </div>
+                    
                     <div className=''>
                     <p class="small">The life expectancy of male in the {this.state.name} is </p>
                     <h1 class="large data">{this.state.life_expectancy_male} years</h1>

@@ -28,6 +28,7 @@
   .data {
     font-weight: bolder;
     text-transform: uppercase;
+    font-size: 5em;
   }
   .Animals .location {
     text-transform: uppercase;
