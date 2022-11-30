@@ -1,8 +1,12 @@
 .App {
   text-align: center;
   padding: 1rem;
+  padding-bottom: 3rem;
+  height: 100%;
 }
-
+.space {
+  margin: 1rem;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,16 +40,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.View {
- 
-}
-.space{
-
-}
-
-.Grid{
-display: flex;
-flex-direction: row;
 }

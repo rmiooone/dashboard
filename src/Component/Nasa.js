@@ -1,5 +1,7 @@
 import React from 'react';
 import '../Assets/Nasa.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'react-bootstrap/Image'
 
 export class Nasa extends React.Component {
     state = {
@@ -26,24 +28,7 @@ export class Nasa extends React.Component {
         return (
             <div className='Nasa'>
                 <div className='container'>
-                    <img
-                        src={this.state.url}
-                        alt=""
-                        style={{
-                            width: 500,
-                            height: 500,
-                            borderBottomLeftRadius: 25,
-                            borderBottomRightRadius: 25,
-                            borderTopRightRadius: 25,
-                            borderTopLeftRadius: 25,
-                            overflow: 'hidden',
-                        }}
-                    />
-                    <div className='bottom'>
-                        <div className='feels'>
-                            <p>Title {this.state.title}</p>
-                        </div>
-                    </div>
+                <Image src={this.state.url} fluid rounded />
                 </div>
             </div>
         );

@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Weather } from './Component/Weather';
 import { Nasa } from './Component/Nasa';
-import { Fact } from './Component/Fact';
+import { Celebrity } from './Component/Celebrity';
 import { AirQuality } from './Component/AirQuality';
-import { Joke } from './Component/Joke';
+import { Animals} from './Component/Animals';
 
 
 class App extends React.Component {
@@ -13,24 +13,28 @@ class App extends React.Component {
     return (
       <div className="App">
         <div class="container">
-          <h1>Learn something today</h1>
           <div class="row">
             <div class="col-sm-4">
-              <Fact/>
+            <Weather />
             </div>
             <div class="col-sm-4">
-            <Joke/>
+              <Animals />
             </div>
             <div class="col-sm-4">
-            <Weather/>
-            </div>
-            <div class="col-sm-4">
-            <AirQuality/>
+            <Celebrity/>
             </div>
           </div>
+        </div>
+        <div class= "space"></div>
+        <div class="container">
           <div class="row">
-            <Nasa/>
-          </div>
+            <div class="col-sm-4">
+              <AirQuality/>
+            </div>
+            <div class="col-sm-8">
+              <Nasa/>
+            </div>
+            </div>
         </div>
       </div>
     );
