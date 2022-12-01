@@ -1,0 +1,142 @@
+[
+    {
+        "datasetid": "0",
+        "name": "Horse"
+    },
+    {
+        "datasetid": "1",
+        "name": "Cheetah"
+    },
+    {
+        "datasetid": "2",
+        "name": "Dog"
+    },
+    {
+        "datasetid": "3",
+        "name": "Cat"
+    },
+    {
+        "datasetid": "4",
+        "name": "Sheep"
+    },
+    {
+        "datasetid": "5",
+        "name": "Cow"
+    },
+    {
+        "datasetid": "6",
+        "name": "Donkey"
+    },
+    {
+        "datasetid": "7",
+        "name": "Chicken"
+    },
+    {
+        "datasetid": "8",
+        "name": "Pig"
+    },
+    {
+        "datasetid": "9",
+        "name": "Rabbit"
+    },
+    {
+        "datasetid": "10",
+        "name": "Duck"
+    },
+    {
+        "datasetid": "11",
+        "name": "Whale"
+    },
+    {
+        "datasetid": "12",
+        "name": "Dolphin"
+    },
+    {
+        "datasetid": "13",
+        "name": "Turtle"
+    },
+    {
+        "datasetid": "14",
+        "name": "Octopus"
+    },
+    {
+        "datasetid": "15",
+        "name": "Jellyfish"
+    },
+    {
+        "datasetid": "16",
+        "name": "Shark"
+    },
+    {
+        "datasetid": "17",
+        "name": "Crab"
+    },
+    {
+        "datasetid": "18",
+        "name": "Giraffe"
+    },
+    {
+        "datasetid": "19",
+        "name": "Elephant"
+    },
+    {
+        "datasetid": "20",
+        "name": "Crocodile"
+    },
+    {
+        "datasetid": "21",
+        "name": "Lion"
+    },
+    {
+        "datasetid": "22",
+        "name": "Zebra"
+    },
+    {
+        "datasetid": "23",
+        "name": "Monkey"
+    },
+    {
+        "datasetid": "24",
+        "name": "Snake"
+    },
+    {
+        "datasetid": "25",
+        "name": "Parrot"
+    },
+    {
+        "datasetid": "26",
+        "name": "Ant"
+    },
+    {
+        "datasetid": "27",
+        "name": "Bee"
+    },
+    {
+        "datasetid": "28",
+        "name": "Butterfly"
+    },
+    {
+        "datasetid": "29",
+        "name": "Cockroach"
+    },
+    {
+        "datasetid": "30",
+        "name": "Fly"
+    },
+    {
+        "datasetid": "31",
+        "name": "Grasshopper"
+    },
+    {
+        "datasetid": "32",
+        "name": "Snail"
+    },
+    {
+        "datasetid": "33",
+        "name": "Spider"
+    },
+    {
+        "datasetid": "34",
+        "name": "Worm"
+    }
+]
