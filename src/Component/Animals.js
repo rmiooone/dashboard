@@ -4,14 +4,17 @@ import '../Assets/Animals.css';
 import logo from '../Assets/img/animals.png';
 
 export class Animals extends React.Component {
-    state = {
-        name: 'cheetah',
-        speed: '',
-        species: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            speed: '',
+            species: ''
+        }
     }
 
-    componentDidMount() {
-        fetch('https://api.api-ninjas.com/v1/animals?name=' + this.state.name, {
+    componentDidUpdate() {
+        fetch('https://api.api-ninjas.com/v1/animals?name=' + this.props.name, {
             method: "GET",
             headers: {
                 "X-Api-Key": "4/Ur96Pow47ygCpZMc8mIQ==sdwlyeOKeiZtixCm"
@@ -22,16 +25,14 @@ export class Animals extends React.Component {
             })
             .then((result) => {
                 this.setState({
-                    name: result[0].name,
-                    speed: result[0].characteristics.top_speed,
+                    name: this.props.name,
+                    speed: result[0].taxonomy.scientific_name,
                     species: result[0].characteristics.number_of_species
                 })
-                console.log(this.state.name);
-                console.log(result);
             })
     }
 
-    render() {
+      render() {
         return (
             <div className='Animals'>
                 <div className='container'>
@@ -50,19 +51,16 @@ export class Animals extends React.Component {
                                 </div>
                             </div>
                             <div class="col-sm-3">
-
                             </div>
                             <div class="col-sm-3 logoweather">
                                 <Image src={logo} fluid rounded alt="Logo of Animals category" />
                             </div>
                         </div>
                     </div>
-
                     <div className='information'>
-                        <p class="small">The {this.state.name} has a maximum speed of</p>
+                        <p class="small">The {this.state.name} is called by the scientifics by </p>
                         <h1 class="large data">{this.state.speed}</h1>
                     </div>
-                    <div class="small"> They are {this.state.species} differents species of it</div>
                 </div>
             </div>
         );
