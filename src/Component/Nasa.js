@@ -19,8 +19,6 @@ export class Nasa extends React.Component {
                     url: result.url,
                     title: result.title,
                 })
-                console.log(result);
-                console.log(this.state.title);
             })
     }
 

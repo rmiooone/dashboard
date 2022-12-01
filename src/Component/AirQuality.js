@@ -41,11 +41,11 @@ var cityname = [
     'Washington',
     'Wellington',
     'Zagreb'
-  ];
-  
-  function getRandomInt(max) {
+];
+
+function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
 export class AirQuality extends React.Component {
     state = {
@@ -96,21 +96,23 @@ export class AirQuality extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className=''>
-                        <h1>{this.state.aqui}</h1>
+                    <div className='value'>
+                        <p>{this.state.aqui}</p>
                     </div>
                     <div className='description'>
                         <p class="lead">Air quality index</p>
                     </div>
-                    <div className=''>
-                        <h1>{this.state.co}</h1>
+                    <div className='value'>
+                        <p>{this.state.co}</p>
                     </div>
+                    <p>mg/m<sup>3</sup></p>
                     <div className='description'>
                         <p class="lead">Concentration of carbon monoxide</p>
                     </div>
-                    <div className=''>
-                        <h1>{this.state.no}</h1>
+                    <div className='value'>
+                        <p>{this.state.no} </p>
                     </div>
+                    <p>mg/m<sup>3</sup></p>
                     <div className='description'>
                         <p class="lead">Concentration of nitrogen dioxide</p>
                     </div>
