@@ -62,15 +62,21 @@ app.listen(9000, () => {
 
 module.exports = app;
 
-const getAnimals = () => database.get(`/getanimal`)
+const getAnimals = () => database.get(`/getanimal/:id`)
 module.exports = getAnimals;
+
+const getAllAnimals = () => database.get(`/getAllanimal`)
+module.exports = getAllAnimals;
+
+const UpdateAnimalsbyId = () => database.patch('/update/:id')
+module.exports = UpdateAnimalsbyId;
+
+const deleteAnimalsbyId = () => database.delete(`/delete/:id`)
+module.exports = deleteAnimalsbyId;
+
+const addAnimals= () => database.post(`/post`)
+module.exports = addAnimals;
 
 const getCountry = () => database.get(`/getcountry`)
 module.exports = getCountry;
-
-const apis = {
-  getAnimals,
-  getCountry
-}
-module.exports = apis;
 
