@@ -31,7 +31,6 @@
   .Country .location {
     text-transform: uppercase;
     color: rgb(103, 95, 95);
-    width: 25%;
    font-weight: bolder;
   }
   

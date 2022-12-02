@@ -24,8 +24,8 @@ export class ViewApp extends React.Component{
   }
 
   callAPIfromAnimals() {
-    const indice = getRandomInt(5);
-    fetch("http://localhost:9000/routeAPI/getanimal")
+    const indice = getRandomInt(10);
+    fetch("http://localhost:9000/routeAPI/getAllanimal")
       .then((res) => res.json())
       .then((res2) =>res2[indice].name)
       .then((res2) => {
@@ -57,7 +57,7 @@ export class ViewApp extends React.Component{
               <div class="container">
                 <div class="row">
                 <div class="col-sm-4">
-                  <h1 class="large title"> Learn informations</h1>
+                  <h1 class="large title">Something to learn</h1>
                 </div>
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
