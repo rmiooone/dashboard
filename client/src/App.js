@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {ViewApp} from './Component/ViewApp/ViewApp';
+import {Profil} from './Component/Admin/Profil';
 
 class App extends React.Component {
 
@@ -13,7 +14,7 @@ class App extends React.Component {
         <Routes>
           <Route path='/Home' exact element={<ViewApp/>} />
           <Route path='/' exact element={<ViewApp/>} />
-          <Route path='/admin' exact element={<ViewApp/>} />
+          <Route path='/admin' exact element={<Profil/>} />
         </Routes>
       </Router>
     );
