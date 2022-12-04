@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -18,10 +19,10 @@ database.on('error', (error) => {
 database.once('connected', () => {
   console.log('Database Connected');
 })
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var APIRouter = require("./routes/routeAPI");
+
 
 var app = express();
 
@@ -62,21 +63,18 @@ app.listen(9000, () => {
 
 module.exports = app;
 
-const getAnimals = () => database.get(`/getanimal/:id`)
-module.exports = getAnimals;
+const getbyId = () => database.get(`/get/:id`)
+const getAll = () => database.get(`/getAll`)
+const UpdatebyId = () => database.patch('/update/:id')
+const deletebyId = () => database.delete(`/delete/:id`)
+const add = () => database.post(`/post`)
 
-const getAllAnimals = () => database.get(`/getAllanimal`)
-module.exports = getAllAnimals;
-
-const UpdateAnimalsbyId = () => database.patch('/update/:id')
-module.exports = UpdateAnimalsbyId;
-
-const deleteAnimalsbyId = () => database.delete(`/delete/:id`)
-module.exports = deleteAnimalsbyId;
-
-const addAnimals= () => database.post(`/post`)
-module.exports = addAnimals;
-
-const getCountry = () => database.get(`/getcountry`)
-module.exports = getCountry;
+module.exports = {
+  add,
+  getbyId,
+  deletebyId,
+  getAll,
+  getbyId,
+  UpdatebyId
+};
 

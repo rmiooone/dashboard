@@ -9,5 +9,13 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
+    "type": {
+        required: true,
+        type: String
+    },
+    "display": {
+        required: true,
+        type: String
+    }
 })
 module.exports = mongoose.model('Animal', dataSchema)

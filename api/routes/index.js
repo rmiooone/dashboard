@@ -1,23 +1,17 @@
 var express = require('express');
-const AnimalsCrtl = require('../controllers/animals-crtl');
-
 var router = express.Router();
-const Model = require('../models/model');
-
-
+const Model = require('../models/modelCountry');
 
 router.get('/', function (req, res, next) {
-  res.send('API is working properly');
+  res.send('API is working properly on index.js');
 });
 
-router.post('/animals', AnimalsCrtl.createAnimals);
-
-router.get('/getanimal', AnimalsCrtl.getAnimals);
-
-router.get('/getAllanimal', AnimalsCrtl.getAnimals);
-
-router.get('/getAll', async(req,res) => {
-res.send('API is working properly');
+router.get('/getcountry', async (req, res) => {
+  try {
+    const data = await Model.find();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
 })
-
 module.exports = router;

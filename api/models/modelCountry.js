@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
-    datasetid: {
+    data: {
+        required: true,
+        type: String
+    },
+   name: {
         required: true,
         type: String
     }
 })
-module.exports = mongoose.model('country', dataSchema)
+module.exports = mongoose.model('Country', dataSchema)

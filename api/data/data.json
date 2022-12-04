@@ -1,0 +1,374 @@
+[
+    {
+        "datasetid": "0",
+        "name": "Horse",
+        "type": "Animal",
+        "display": "true"
+    },
+    {
+        "datasetid": "1",
+        "name": "Cheetah",
+        "type": "Animal",
+        "display": "true"
+    },
+    {
+        "datasetid": "2",
+        "name": "Dog",
+        "type": "Animal",
+        "display": "true"
+    },
+    {
+        "datasetid": "3",
+        "name": "Cat",
+        "type": "Animal",
+        "display": "true"
+    },
+    {
+        "datasetid": "4",
+        "name": "Sheep",
+        "type": "Animal",
+        "display": "true"
+    },
+    {
+        "datasetid": "5",
+        "name": "Cow",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "6",
+        "name": "Donkey",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "7",
+        "name": "Chicken",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "8",
+        "name": "Pig",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "9",
+        "name": "Rabbit",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "10",
+        "name": "Duck",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "11",
+        "name": "Whale",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "12",
+        "name": "Dolphin",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "13",
+        "name": "Turtle",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "14",
+        "name": "Octopus",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "15",
+        "name": "Jellyfish",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "16",
+        "name": "Shark",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "17",
+        "name": "Crab",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "18",
+        "name": "Giraffe",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "19",
+        "name": "Elephant",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "20",
+        "name": "Crocodile",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "21",
+        "name": "Lion",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "22",
+        "name": "Zebra",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "23",
+        "name": "Monkey",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "24",
+        "name": "Snake",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "25",
+        "name": "Parrot",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "26",
+        "name": "Ant",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "27",
+        "name": "Bee",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "28",
+        "name": "Butterfly",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "29",
+        "name": "Cockroach",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "30",
+        "name": "Fly",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "31",
+        "name": "Grasshopper",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "32",
+        "name": "Snail",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "33",
+        "name": "Spider",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "34",
+        "name": "Worm",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "35",
+        "name": "United States",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "36",
+        "name": "Portugal",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "37",
+        "name": "China",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "38",
+        "name": "Chad",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "39",
+        "name": "Guinea",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "40",
+        "name": "South Africa",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "41",
+        "name": "Germany ",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "42",
+        "name": "Iceland",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "43",
+        "name": "Luxembourg",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "44",
+        "name": "Slovenia",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "45",
+        "name": "Switzerland",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "46",
+        "name": "Nicaragua",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "47",
+        "name": "Marrakesh",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "48",
+        "name": "Manila",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "49",
+        "name": "Mexico City",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "50",
+        "name": "Montreal",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "51",
+        "name": "Moscow",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "52",
+        "name": "Mumbai",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "53",
+        "name":"Nairobi",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "54",
+        "name": "New Delhi",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "55",
+        "name":"New York",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "56",
+        "name":"Nicosia",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "57",
+        "name":"Oslo",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "58",
+        "name":"Ottawa",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "59",
+        "name":"Paris",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "60",
+        "name": "Prague",
+        "type": "City",
+        "display": "true"
+    },
+    {
+        "datasetid": "61",
+        "name": "Rio de Janeiro",
+        "type": "City",
+        "display": "true"
+    }
+]
