@@ -1,0 +1,29 @@
+.Nasa {
+  width: 100%;
+  height: 100%;
+  top: 2rem;
+  position: relative;
+  }
+
+  @media (max-width: 575px) {
+    .Nasa {
+      top: 3rem;
+    }
+  }
+
+  .Nasa.bottom {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+    margin: 1rem; 
+    padding: 0.5rem; 
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255, 0.4);
+  }
+
+.Nasa.description {
+    position: relative; 
+    right: -47%;
+    top: 20%;
+    transform: rotate(270deg);
+  }
