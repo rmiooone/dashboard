@@ -1,0 +1,78 @@
+.Categorie {
+    width: 100%;
+    height: 100%;
+    top: 1rem;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px #999;
+  } 
+
+  .Categorie .top {
+      width: 100%;
+      height: 1rem;
+      margin: 1rem;
+  }
+  
+  .Categorie  .description {
+    position: relative;
+    right: 0%;
+  }
+
+  .Categorie .information {
+    padding: 1rem;
+  }
+
+  .Categorie .data {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  .Categorie  .location {
+    text-transform: uppercase;
+    color: rgb(103, 95, 95);
+    font-weight: bolder;
+  }
+  
+  .Categorie .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+
+.inputdata input{
+  width: 100%;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.cnt-suggestions{
+  border-radius: 12px;
+}
+
+.suggestion {
+  background-color: rgba(0, 0, 0, 0.768);
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0.15rem;
+  width: 16%;
+  margin-left:0.5rem;
+  border-radius: 5px;
+}
+.addBar {
+  width: 100%;
+}
+.addBar input {
+  font-size: 1.2rem;
+  width: 100%;
+}
+.add_results {
+  padding-top: 1rem;
+  width: 100%;
+  margin-left:0.5rem;
+}
