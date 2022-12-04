@@ -1,26 +1,50 @@
 [
     {
         "datasetid": "0",
-        "name": "United states"
+        "name": "Horse",
+        "type": "Animal",
+        "display": "true"
     },
     {
         "datasetid": "1",
-        "name": "France"
-    },
-    {
-        "datasetid": "2",
-        "name": "China"
-    },
-    {
-        "datasetid": "3",
-        "name": "England"
+        "name": "Cheetah",
+        "type": "Animal",
+        "display": "true"
     },
     {
         "datasetid": "4",
-        "name": "Quatar"
+        "name": "Sheep",
+        "type": "Animal",
+        "display":"true"
     },
     {
         "datasetid": "5",
-        "name": "Australia"
+        "name": "Cow",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "6",
+        "name": "Donkey",
+        "type": "Animal",
+        "display": "false"
+    },
+    {
+        "datasetid": "35",
+        "name": "United States",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "36",
+        "name": "Portugal",
+        "type": "Country",
+        "display": "true"
+    },
+    {
+        "datasetid": "37",
+        "name": "China",
+        "type": "Country",
+        "display": "true"
     }
 ]

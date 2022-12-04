@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 const Model = require('../models/model');
-const ModelCountry = require('../models/modelCountry');
+const modelCountry = require('../models/modelCountry');
 
-router.get('/getanimal/:id', async (req, res) => {
+
+router.get('/', function (req, res, next) {
+  res.send('API is working properly on routeAPI.js');
+});
+
+
+router.get('/get/:id', async (req, res) => {
   try{
     const data = await Model.findById(req.params.id);
     res.json(data)
@@ -13,7 +19,7 @@ catch(error){
 }
 })
 
-router.get('/getAllanimal', async (req, res) => {
+router.get('/getAll', async (req, res) => {
   try {
     const data = await Model.find();
     res.json(data);
@@ -65,16 +71,6 @@ router.post('/post', async (req, res) => {
     catch (error) {
         res.status(400).json({ message: error.message })
     }
-})
-
-
-router.get('/getcountry', async (req, res) => {
-  try {
-    const data = await ModelCountry.find();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
 })
 
 module.exports = router;
