@@ -1,0 +1,44 @@
+.widget {
+  width: 100%;
+  height: 100%;
+  top: 1rem;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px #999;
+  background-color: white;
+  }
+
+  .widget .location {
+    text-transform: uppercase;
+    color: rgb(103, 95, 95);
+   font-weight: bolder;
+  } 
+  .widget .top {
+    width: 100%;
+    height: 1rem;
+    margin: 1rem;
+  }
+  .widget .logoweather {
+    top: -10%;
+  }
+  .widget .data {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 5em;
+  }
+  
+  .widget .description {
+    position: relative; 
+    right: -47%;
+    top: 20%;
+    transform: rotate(270deg);
+  }
+  
+  .widget .bottom { 
+    text-align: center; 
+    margin: 1rem; 
+    padding: 0.5rem; 
+    text-transform: uppercase;
+   font-weight: bolder;
+   
+  }
