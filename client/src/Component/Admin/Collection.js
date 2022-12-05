@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../Assets/Categorie.css';
-
 import styled from 'styled-components'
 
 const Update = styled.div`
@@ -31,10 +30,8 @@ const Delete = styled.div`
     padding: 0.25rem;
     text-align: center;
 `
+
 class UpdateAnimals extends React.Component {
-    constructor(props) {
-        super(props)
-    }
     updateUser = event => {
         event.preventDefault()
 
@@ -47,7 +44,11 @@ class UpdateAnimals extends React.Component {
         window.location.reload()
     }
     render() {
-        return <Update onClick={this.updateUser}>Unsee</Update>
+        return (
+            <div>
+                <Update onClick={this.updateUser}>Unsee</Update>
+            </div>
+        );
     }
 }
 
@@ -119,15 +120,15 @@ export class Collection extends React.Component {
                 </div>
                 <div className='container'>
                     <div class="row">
-                    <div class="col-sm-2">
-                    </div>
+                        <div class="col-sm-2">
+                        </div>
                         <div class="col-sm-3">
                             <span>
                                 <DeleteAnimals id={this.props.id} name={this.props.name} />
                             </span>
                         </div>
                         <div class="col-sm-2">
-                    </div>
+                        </div>
                         <div class="col-sm-3">
                             <span>
                                 <UpdateAnimals id={this.props.id} />

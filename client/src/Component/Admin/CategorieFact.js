@@ -30,7 +30,7 @@ class AddAnimals extends React.Component {
         fetch('https://api.api-ninjas.com/v1/facts?limit=1', {
             method: "GET",
             headers: {
-                "X-Api-Key": "qauH53MEMstHbw96a8pUhQ==HuCMx80DeJxd4VPv"
+                "X-Api-Key": "4TrQ4HpmKrrq90NzGpRRnA==zfOOdajcZ3G6OFJD"
             }
         })
             .then((reponse) => {
