@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Weather } from '../Weather';
-import { Nasa } from '../Nasa';
-import { AirQuality } from '../AirQuality';
-import { Animals } from '../Animals';
-import { Fact } from '../Fact';
-import { Country } from '../Country';
-import { Color } from '../Color';
+import { Weather } from '../Widget/Weather';
+import { Nasa } from '../Widget/Nasa';
+import { AirQuality } from '../Widget/AirQuality';
+import { Animals } from '../Widget/Animals';
+import { Fact } from '../Widget/Fact';
+import { Country } from '../Widget/Country';
+import { Color } from '../Widget/Color';
 
 import '../../Assets/ViewApp.css';
 
