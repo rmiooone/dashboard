@@ -43,8 +43,10 @@ catch (error) {
 //Post Method
 router.post('/post', async (req, res) => {
   const data = new Model({
-      datasetid: req.body. datasetid,
-      name: req.body.name
+      datasetid: req.body.datasetid,
+      name: req.body.name,
+      type: req.body.type,
+      display: req.body.display
   })
 
   try {
