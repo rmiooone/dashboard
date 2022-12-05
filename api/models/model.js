@@ -9,11 +9,11 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    "type": {
+    type: {
         required: true,
         type: String
     },
-    "display": {
+    display: {
         required: true,
         type: String
     }
