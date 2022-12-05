@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <Router>
         <Routes>
-          <Route path='/Home' exact element={<ViewApp/>} />
+          <Route path='/home' exact element={<ViewApp/>} />
           <Route path='/' exact element={<ViewApp/>} />
           <Route path='/admin' exact element={<Profil/>} />
         </Routes>

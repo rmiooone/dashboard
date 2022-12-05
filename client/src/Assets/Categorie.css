@@ -48,3 +48,31 @@
   font-size: 1.2rem;
   margin-left: 1rem;
 }
+
+.cnt-suggestions{
+  border-radius: 12px;
+}
+
+.suggestion {
+  background-color: rgba(0, 0, 0, 0.768);
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0.15rem;
+  width: 16%;
+  margin-left:0.5rem;
+  border-radius: 5px;
+}
+.addBar {
+  width: 100%;
+}
+.addBar input {
+  font-size: 1.2rem;
+  width: 100%;
+}
+.add_results {
+  padding-top: 1rem;
+  width: 100%;
+  margin-left:0.5rem;
+}

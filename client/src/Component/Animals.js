@@ -9,15 +9,17 @@ export class Animals extends React.Component {
         this.state = {
             name: '',
             speed: '',
-            species: ''
+            species: '',
+            requete: true
         }
     }
 
     componentDidUpdate() {
+        if (this.state.requete == true ) {
         fetch('https://api.api-ninjas.com/v1/animals?name=' + this.props.name, {
             method: "GET",
             headers: {
-                "X-Api-Key": "4/Ur96Pow47ygCpZMc8mIQ==sdwlyeOKeiZtixCm"
+                "X-Api-Key": "qauH53MEMstHbw96a8pUhQ==HuCMx80DeJxd4VPv"
             }
         })
             .then((reponse) => {
@@ -25,12 +27,14 @@ export class Animals extends React.Component {
             })
             .then((result) => {
                 this.setState({
-                    name: this.props.name,
+                    name: result[0].name,
                     speed: result[0].taxonomy.scientific_name,
-                    species: result[0].characteristics.number_of_species
+                    species: result[0].characteristics.number_of_species,
+                    requete: false
                 })
             })
     }
+}
 
       render() {
         return (
@@ -40,20 +44,18 @@ export class Animals extends React.Component {
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-3">
                                 <div className='location'>
                                     <p class="small">Animals</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-6">
                                 <div className='location'>
                                     <p class="small">{this.state.name}</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
-                            </div>
-                            <div class="col-sm-3 logoweather">
-                                <Image src={logo} fluid rounded alt="Logo of Animals category" />
+                            <div class="col-2 logoweather">
+                                <Image src={logo} fluid rounded width= "100px" alt="Logo of Animals category" />
                             </div>
                         </div>
                     </div>
