@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../Assets/Categorie.css';
-import { Collection } from "../Admin/Collection";
+import { CollectionFact } from "./CollectionFact";
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import '../../Assets/Search.css'
@@ -19,103 +19,36 @@ const Add = styled.div`
     padding: 0.5rem 0.5rem;
     text-align: center;
 `
-function AddElement(type) {
-    JSON.stringify(type);
-    const [datas, setDatas] = useState([]);
-    const [addTerm, setAddTerm] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:9000/routeAPI/getAll`)
-            .then((response) => response.json())
-            .then((json) => json.filter((res) => {
-                return res.display.includes("false");
-            }))
-            .then((resp) => setDatas(resp.filter((res) => {
-                return res.type.includes(type.type);
-            })))
-    }, []);
-
-    const handleAddTerm = (e) => {
-        let value = e.target.value;
-        value.length > 2 && setAddTerm(value);
-    }
-
-    return (
-        <>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-sm-6'>
-                        <div className="addBar">
-                            <input
-                                type="text"
-                                name="add"
-                                id="addBar"
-                                placeholder=''
-                                onChange={handleAddTerm}
-                            />
-                        </div>
-                    </div>
-                    <div className='col-sm-2'>
-                    </div>
-                    <div className='col-sm-2'>
-                        <AddAnimals value={addTerm} />
-                    </div>
-                </div>
-            </div>
-
-            <div className='container add_results'>
-                <div className='row cnt-suggestions'>
-                    {datas.filter((res) => {
-                        const valeur = res.name.includes(addTerm) || res.name.toLowerCase().includes(addTerm);
-                        return valeur;
-                    })
-                        .map((res, index) => (
-                            <div key={index} class="col-sm-3 suggestion">{res.name}</div>
-                        ))}
-                </div>
-            </div>
-        </>
-    );
-}
-
 class AddAnimals extends React.Component {
 
     state = {
-        id: this.props
+        id: this.props,
+        word: "",
     }
 
     addUser = event => {
-        event.preventDefault()
-        /*    const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ datasetid: "45", name: this.props.value })
-            };
-            fetch("http://localhost:9000/routeAPI/post", requestOptions)
-            window.location.reload()
-        }*/
-        fetch(`http://localhost:9000/routeAPI/getAll`)
-            .then((response) => response.json())
-            .then((json) => json.filter((res) => {
-                return res.name.includes(this.props.value);
-            }))
-            .then((resp) => {
-                console.log(resp[0]._id)
+        fetch('https://api.api-ninjas.com/v1/facts?limit=1', {
+            method: "GET",
+            headers: {
+                "X-Api-Key": "qauH53MEMstHbw96a8pUhQ==HuCMx80DeJxd4VPv"
+            }
+        })
+            .then((reponse) => {
+                return reponse.json()
+            })
+            .then((result) => {
                 const requestOptions = {
-                    method: 'PATCH',
+                    method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ display: "true" })
+                    body: JSON.stringify({ datasetid: "45", name: result[0].fact, type: "Fact", display: "true" })
                 };
-                fetch("http://localhost:9000/routeAPI/update/" + resp[0]._id, requestOptions);
+                event.preventDefault()
+                fetch("http://localhost:9000/routeAPI/post", requestOptions)
                 window.location.reload()
-            });
-
-        const requestOptions = {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ display: "false" })
-        };
-        // fetch("http://localhost:9000/routeAPI/update/" + this.props.id, requestOptions)
-        // window.location.reload()
+                this.setState({
+                    word: result[0].fact,
+                })
+            })
     }
     render() {
         return <Add onClick={this.addUser}>Add data</Add>
@@ -136,7 +69,6 @@ function Search(type) {
                 return res.type.includes(type.type);
             })))
     }, []);
-
     const handleSearchTerm = (e) => {
         let value = e.target.value;
         setSearchTerm(value);
@@ -158,7 +90,7 @@ function Search(type) {
                         return res.name.includes(searchTerm) || res.name.toLowerCase().includes(searchTerm) || res.type.includes(searchTerm) || res.datasetid.includes(searchTerm);
                     })
                         .map((res, index) => (
-                            <Collection key={index} display={res.display} id={res._id} name={res.name} datasetid={res.datasetid} />
+                            <CollectionFact key={index} display={res.display} id={res._id} name={res.name} datasetid={res.datasetid} />
                         ))}
                 </div>
             </div>
@@ -166,7 +98,7 @@ function Search(type) {
     );
 }
 
-export class Categorie extends React.Component {
+export class CategorieFact extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -205,7 +137,7 @@ export class Categorie extends React.Component {
                                     </div>
                                 </div>
                                 <div class="container">
-                                    <AddElement type={this.props.type} />
+                                    <AddAnimals />
                                 </div>
 
                                 <div class="container">

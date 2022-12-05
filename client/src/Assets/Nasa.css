@@ -5,11 +5,16 @@
   position: relative;
   }
 
+  @media (max-width: 1000px) {
+    .Nasa {
+      top: 5rem;
+    }
+  }
+
   .Nasa.bottom {
     display: flex;
     justify-content: space-between;
     text-align: center; 
-    margin: 1rem; 
     padding: 0.5rem; 
     border-radius: 12px;
     background-color: rgb(255, 255, 255, 0.4);

@@ -4,7 +4,7 @@ import { Weather } from '../Weather';
 import { Nasa } from '../Nasa';
 import { AirQuality } from '../AirQuality';
 import { Animals } from '../Animals';
-import { Dictionnary } from '../Dictionnary';
+import { Fact } from '../Fact';
 import { Country } from '../Country';
 import { Color } from '../Color';
 
@@ -19,49 +19,73 @@ export class ViewApp extends React.Component{
     super(props);
     this.state = {
       animals: "",
-      country: ""
+      country: "",
+      city:"",
+      word:"",
+      inflation:""
     };
   }
 
   callAPIfromAnimals() {
-    const indice = getRandomInt(10);
-    fetch("http://localhost:9000/routeAPI/getAllanimal")
+    fetch("http://localhost:9000/routeAPI/getAll")
       .then((res) => res.json())
-      .then((res2) =>res2[indice].name)
+      .then((json) => json.filter((res) => {
+        return res.display.includes("true");
+    })).then((resp) => resp.filter((res) => {
+      return res.type.includes("Animal");
+  }))
       .then((res2) => {
-        this.setState({ animals: res2 })
+        const indice = getRandomInt(res2.length);
+        this.setState({ animals: res2[indice].name})
       });
   }
 
-  /*callAPIfromCountry() {
-    const indice = getRandomInt(5);
-    fetch("http://localhost:9000/routeAPI/getcountry")
+  callAPIfromCountry() {
+    fetch("http://localhost:9000/routeAPI/getAll")
       .then((res) => res.json())
-      .then((res2) =>res2[indice])
+      .then((json) => json.filter((res) => {
+        return res.display.includes("true");
+    })).then((resp) => resp.filter((res) => {
+      return res.type.includes("Country");
+  }))
       .then((res2) => {
-        this.setState({ country: res2 })
+        const indice = getRandomInt(res2.length);
+        this.setState({ country: res2[indice].name})
       });
+  }
 
-      console.log(this.state.country);
-  }*/
+  callAPIfromCity() {
+    fetch("http://localhost:9000/routeAPI/getAll")
+      .then((res) => res.json())
+      .then((json) => json.filter((res) => {
+        return res.display.includes("true");
+    })).then((resp) => resp.filter((res) => {
+      return res.type.includes("City");
+  }))
+      .then((res2) => {
+        const indice = getRandomInt(res2.length);
+        this.setState({ city: res2[indice].name})
+      });
+  }
 
   componentDidMount() {
     this.callAPIfromAnimals();
-    //this.callAPIfromCountry();
+    this.callAPIfromCountry();
+    this.callAPIfromCity();
   }
   render() {
     return (
       <div className="App">
           <div class="row">
-            <div class="col-sm-12 entete">
+            <div class="col-12 entete">
               <div class="container">
                 <div class="row">
-                <div class="col-sm-4">
-                  <h1 class="large title">Something to learn</h1>
+                <div class="col-4">
+                  <h1 class="large title">Random information</h1>
                 </div>
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                <div onClick={() => window.location.reload()}>
+                <div class="col-4"></div>
+                <div class="col-4">
+                <div onClick={() =>  window.location.reload()}>
                   <p class="refresh">New content</p>
                   </div>
                 </div>
@@ -72,14 +96,14 @@ export class ViewApp extends React.Component{
 
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
-              <Weather />
+            <div class="col-lg-4">
+              <Weather name={this.state.city}/>
             </div>
-            <div class="col-sm-4">
-              <Animals name = {this.state.animals}/>
+            <div class="col-lg-4">
+              <Animals name={this.state.animals}/>
             </div>
-            <div class="col-sm-4">
-              <Country />
+            <div class="col-lg-4">
+              <Country name={this.state.country}/>
             </div>
           </div>
         </div>
@@ -87,10 +111,10 @@ export class ViewApp extends React.Component{
         <div class="space"></div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
-              <AirQuality />
+            <div class="col-lg-4">
+              <AirQuality name={this.state.city}/>
             </div>
-            <div class="col-sm-8">
+            <div class="col-lg-8">
               <Nasa />
             </div>
           </div>
@@ -100,10 +124,10 @@ export class ViewApp extends React.Component{
         <div class="space"></div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
-              <Dictionnary />
+            <div class="col-lg-6">
+              <Fact />
             </div>
-            <div class="col-sm-6">
+            <div class="col-lg-6">
               <Color />
             </div>
           </div>

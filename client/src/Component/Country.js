@@ -3,45 +3,37 @@ import Image from 'react-bootstrap/Image';
 import '../Assets/Country.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../Assets/img/country.png';
-
-var countryname = [
-    'Portugal',
-    'Congo',
-    'Egypt',
-    'Croatia',
-    'Italy',
-    'Lithuania'
-  ];
-  
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-  
 export class Country extends React.Component {
-    state = {
-        name: '',
-        life_expectancy_male: '',
-        life_expectancy_female: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            life_expectancy_male: '',
+            life_expectancy_female: '',
+            requete: true
+        }
     }
 
-    componentDidMount() {
-        var country = countryname[getRandomInt(6)];
-        fetch('https://api.api-ninjas.com/v1/country?name=' + country, {
-            method: "GET",
-            headers: {
-                "X-Api-Key": "4/Ur96Pow47ygCpZMc8mIQ==sdwlyeOKeiZtixCm"
-            }
-        })
-            .then((reponse) => {
-                return reponse.json()
+    componentDidUpdate() {
+        if (this.state.requete == true) {
+            fetch('https://api.api-ninjas.com/v1/country?name=' + this.props.name, {
+                method: "GET",
+                headers: {
+                    "X-Api-Key": "qauH53MEMstHbw96a8pUhQ==HuCMx80DeJxd4VPv"
+                }
             })
-            .then((result) => {
-                this.setState({
-                    name: country,
-                    life_expectancy_male: result[0].life_expectancy_male,
-                    life_expectancy_female: result[0].life_expectancy_female
+                .then((reponse) => {
+                    return reponse.json()
                 })
-            })
+                .then((result) => {
+                    this.setState({
+                        name: result[0].name,
+                        life_expectancy_male: result[0].life_expectancy_male,
+                        life_expectancy_female: result[0].life_expectancy_female,
+                        requete: false
+                    })
+                })
+            }
     }
 
     render() {
@@ -52,17 +44,17 @@ export class Country extends React.Component {
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-3">
                                 <div className='location'>
                                     <p class="small">Country</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-6">
                                 <div className='location'>
                                     <p class="small">{this.state.name}</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3 logoweather">
+                            <div class="col-2 logoweather">
                                 <Image src={logo} fluid rounded alt="Logo of Animals category" />
                             </div>
                         </div>
@@ -76,7 +68,7 @@ export class Country extends React.Component {
                     <h1 class="large data">{this.state.life_expectancy_female} years</h1>
                 </div>
             </div>
-            
+
         );
     }
 

@@ -3,21 +3,6 @@ import '../../Assets/Categorie.css';
 
 import styled from 'styled-components'
 
-const Update = styled.div`
-    color: #ef9b0f;
-    width : 100%;
-    cursor: pointer;
-    color: #ff0000;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: rgb(25,25,112);
-    font-weight: bolder;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    padding: 0.25rem;
-    text-align: center;
-`
 const Delete = styled.div`
     color: #ff0000;
     cursor: pointer;
@@ -31,33 +16,13 @@ const Delete = styled.div`
     padding: 0.25rem;
     text-align: center;
 `
-class UpdateAnimals extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    updateUser = event => {
-        event.preventDefault()
-
-        const requestOptions = {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ display: "false" })
-        };
-        fetch("http://localhost:9000/routeAPI/update/" + this.props.id, requestOptions)
-        window.location.reload()
-    }
-    render() {
-        return <Update onClick={this.updateUser}>Unsee</Update>
-    }
-}
-
 class DeleteAnimals extends React.Component {
     deleteUser = event => {
         event.preventDefault()
 
         if (
             window.confirm(
-                `Do tou want to delete ${this.props.name} permanently?`,
+                `Do tou want to delete this fact permanently?`,
             )
         ) {
             fetch("http://localhost:9000/routeAPI/delete/" + this.props.id)
@@ -69,7 +34,7 @@ class DeleteAnimals extends React.Component {
     }
 }
 
-export class Collection extends React.Component {
+export class CollectionFact extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -124,13 +89,6 @@ export class Collection extends React.Component {
                         <div class="col-sm-3">
                             <span>
                                 <DeleteAnimals id={this.props.id} name={this.props.name} />
-                            </span>
-                        </div>
-                        <div class="col-sm-2">
-                    </div>
-                        <div class="col-sm-3">
-                            <span>
-                                <UpdateAnimals id={this.props.id} />
                             </span>
                         </div>
                     </div>
